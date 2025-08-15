@@ -1,2 +1,1 @@
-# Personal Library System
-## _LIBSOU_
+# Personal Library System _LIBSOU_
