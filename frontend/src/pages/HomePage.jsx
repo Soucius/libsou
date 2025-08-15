@@ -33,12 +33,14 @@ function HomePage() {
           <div className="text-center text-primary py-10">Loading books...</div>
         )}
 
-        {books.length > 0 && (
+        {books.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {books.map((book) => (
               <BookCard key={book._id} book={book} />
             ))}
           </div>
+        ) : (
+          <div className="text-center text-primary py-10">No books found.</div>
         )}
       </div>
     </div>
