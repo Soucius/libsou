@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { PlusIcon } from "lucide-react";
+import { PlusIcon, UserRound } from "lucide-react";
 
 function Navbar() {
   return (
@@ -11,10 +11,16 @@ function Navbar() {
           </h1>
 
           <div className="flex items-center gap-4">
-            <Link to={"/create"} className="btn btn-primary">
+            <Link to={"/create"} className="btn btn-outline">
               <PlusIcon className="size-5" />
 
               <span>New Book</span>
+            </Link>
+
+            <Link to={"/login"} className="btn btn-primary">
+              <UserRound className="size-5" />
+
+              <span>Login/Register</span>
             </Link>
           </div>
         </div>
