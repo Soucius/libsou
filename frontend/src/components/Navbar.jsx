@@ -17,10 +17,10 @@ function Navbar() {
               <span>New Book</span>
             </Link>
 
-            <Link to={"/login"} className="btn btn-primary">
+            <Link to={"/sign-in"} className="btn btn-primary">
               <UserRound className="size-5" />
 
-              <span>Login/Register</span>
+              <span>Sign In / Sign Up</span>
             </Link>
           </div>
         </div>

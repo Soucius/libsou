@@ -1,19 +1,18 @@
 import { Link } from "react-router";
 
-const SignInPage = () => {
+const SignUpPage = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="card bg-base-100 w-96 h-97 shadow-sm border border-primary">
         <div className="card-title justify-center mt-3">
-          <h2 className="text-3xl">Sign In</h2>
+          <h2 className="text-3xl">Sign Up</h2>
         </div>
 
         <div className="label mt-3 mx-auto">
-          Sign in your{" "}
+          Sign up to{" "}
           <span className="text-primary hover:underline">
             <Link to="/">LIBSOU</Link>
           </span>{" "}
-          account.
         </div>
 
         <div className="m-3">
@@ -44,19 +43,19 @@ const SignInPage = () => {
           </div>
 
           <div className="card-actions justify-center mx-6">
-            <button className="btn btn-primary w-full">Sign In</button>
+            <button className="btn btn-primary w-full">Sign Up</button>
 
             <p className="label mt-3">
-              You don't have any{" "}
+              Do you have
               <span className="text-primary hover:underline">
                 <Link to="/">LIBSOU</Link>
               </span>{" "}
-              account yet?
+              account?
             </p>
 
             <p className="label">
               <span className="text-secondary hover:underline">
-                <Link to="/sign-up">Sign Up</Link>
+                <Link to="/sign-in">Sign In</Link>
               </span>{" "}
               with this link.
             </p>
@@ -67,4 +66,4 @@ const SignInPage = () => {
   );
 };
 
-export default SignInPage;
+export default SignUpPage;

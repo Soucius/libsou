@@ -11,10 +11,14 @@ function BookCard({ book }) {
         <div className="card bg-base-100 w-full h-full shadow-sm border border-primary justify-between">
           <div className="card-title justify-center mt-3 mx-3">
             <div className="badge badge-primary w-full">
-              {formatDate(new Date(book.createdAt))}
+              <span className="label text-white">
+                {formatDate(new Date(book.createdAt))}
+              </span>
             </div>
 
-            <div className="badge badge-secondary w-full">{book.author}</div>
+            <div className="badge badge-secondary w-full">
+              <span className="label text-white">{book.author}</span>
+            </div>
           </div>
 
           <div className="m-3">
@@ -25,12 +29,20 @@ function BookCard({ book }) {
             </div>
 
             <div className="card-body">
-              <h2 className="card-title">{book.title}</h2>
+              <h2 className="card-title">
+                <span className="label text-white text-xl font-bold">
+                  {book.title}
+                </span>
+              </h2>
 
               <div className="card-actions justify-start">
-                <div className="badge badge-outline">{book.publisher}</div>
+                <div className="badge badge-outline">
+                  <span className="label text-white">{book.publisher}</span>
+                </div>
 
-                <div className="badge badge-outline">{book.year}</div>
+                <div className="badge badge-outline">
+                  <span className="label text-white">{book.year}</span>
+                </div>
               </div>
             </div>
           </div>
