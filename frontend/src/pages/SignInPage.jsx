@@ -17,30 +17,32 @@ const SignInPage = () => {
         </div>
 
         <div className="m-3">
-          <div className="card-body">
-            <fieldset className="fieldset mb-1">
-              <legend className="fieldset-legend">
-                Username <span className="text-red-600">*</span>
-              </legend>
+          <div className="form">
+            <div className="card-body">
+              <fieldset className="fieldset mb-1">
+                <legend className="fieldset-legend">
+                  Username <span className="text-red-600">*</span>
+                </legend>
 
-              <input
-                type="text"
-                className="input"
-                placeholder="Your Username..."
-              />
-            </fieldset>
+                <input
+                  type="text"
+                  className="input"
+                  placeholder="Your Username..."
+                />
+              </fieldset>
 
-            <fieldset className="fieldset mb-2">
-              <legend className="fieldset-legend">
-                Password <span className="text-red-600">*</span>
-              </legend>
+              <fieldset className="fieldset mb-2">
+                <legend className="fieldset-legend">
+                  Password <span className="text-red-600">*</span>
+                </legend>
 
-              <input
-                type="password"
-                className="input"
-                placeholder="Your Password..."
-              />
-            </fieldset>
+                <input
+                  type="password"
+                  className="input"
+                  placeholder="Your Password..."
+                />
+              </fieldset>
+            </div>
           </div>
 
           <div className="card-actions justify-center mx-6">
