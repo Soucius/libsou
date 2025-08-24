@@ -19,29 +19,33 @@ const SignInPage = () => {
         <div className="m-3">
           <div className="form">
             <div className="card-body">
-              <fieldset className="fieldset mb-1">
-                <legend className="fieldset-legend">
-                  Username <span className="text-red-600">*</span>
-                </legend>
+              <div className="form-control">
+                <fieldset className="fieldset mb-1">
+                  <legend className="fieldset-legend">
+                    Username <span className="text-red-600">*</span>
+                  </legend>
 
-                <input
-                  type="text"
-                  className="input"
-                  placeholder="Your Username..."
-                />
-              </fieldset>
+                  <input
+                    type="text"
+                    className="input"
+                    placeholder="Your Username..."
+                  />
+                </fieldset>
+              </div>
 
-              <fieldset className="fieldset mb-2">
-                <legend className="fieldset-legend">
-                  Password <span className="text-red-600">*</span>
-                </legend>
+              <div className="form-control">
+                <fieldset className="fieldset mb-2">
+                  <legend className="fieldset-legend">
+                    Password <span className="text-red-600">*</span>
+                  </legend>
 
-                <input
-                  type="password"
-                  className="input"
-                  placeholder="Your Password..."
-                />
-              </fieldset>
+                  <input
+                    type="password"
+                    className="input"
+                    placeholder="Your Password..."
+                  />
+                </fieldset>
+              </div>
             </div>
           </div>
 

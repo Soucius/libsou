@@ -10,36 +10,60 @@ const SignUpPage = () => {
 
         <div className="label mt-3 mx-auto">
           Sign up to{" "}
-          <span className="text-primary hover:underline">
-            <Link to="/">LIBSOU</Link>
-          </span>{" "}
+          <span className="text-primary hover:underline">LIBSOU</span>{" "}
         </div>
 
         <div className="m-3">
-          <div className="card-body">
-            <fieldset className="fieldset mb-1">
-              <legend className="fieldset-legend">
-                Username <span className="text-red-600">*</span>
-              </legend>
+          <div className="form">
+            <div className="card-body">
+              <div className="form-control">
+                <fieldset className="fieldset mb-1">
+                  <legend className="fieldset-legend">
+                    Username <span className="text-red-600">*</span>
+                  </legend>
 
-              <input
-                type="text"
-                className="input"
-                placeholder="Your Username..."
-              />
-            </fieldset>
+                  <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    className="input"
+                    placeholder="Your Username..."
+                  />
+                </fieldset>
+              </div>
 
-            <fieldset className="fieldset mb-2">
-              <legend className="fieldset-legend">
-                Password <span className="text-red-600">*</span>
-              </legend>
+              <div className="form-control">
+                <fieldset className="fieldset mb-2">
+                  <legend className="fieldset-legend">
+                    Password <span className="text-red-600">*</span>
+                  </legend>
 
-              <input
-                type="password"
-                className="input"
-                placeholder="Your Password..."
-              />
-            </fieldset>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    className="input"
+                    placeholder="Your Password..."
+                  />
+                </fieldset>
+              </div>
+
+              <div className="form-control">
+                <fieldset className="fieldset mb-2">
+                  <legend className="fieldset-legend">
+                    Re-type Password <span className="text-red-600">*</span>
+                  </legend>
+
+                  <input
+                    type="password"
+                    id="retype-password"
+                    name="retype-password"
+                    className="input"
+                    placeholder="Re-type Your Password..."
+                  />
+                </fieldset>
+              </div>
+            </div>
           </div>
 
           <div className="card-actions justify-center mx-6">
@@ -47,9 +71,7 @@ const SignUpPage = () => {
 
             <p className="label mt-3">
               Do you have
-              <span className="text-primary hover:underline">
-                <Link to="/">LIBSOU</Link>
-              </span>{" "}
+              <span className="text-primary hover:underline">LIBSOU</span>{" "}
               account?
             </p>
 
