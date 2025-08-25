@@ -6,6 +6,13 @@ const SignUpPage = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [retypePassword, setRetypePassword] = useState("");
+  const [test, setTest] = useState("");
+
+  const handleTestSubmit = (e) => {
+    e.preventDefault();
+
+    console.log(test);
+  };
 
   const handleForm = (e) => {
     e.preventDefault();
@@ -23,6 +30,26 @@ const SignUpPage = () => {
         <div className="card-title justify-center mt-3">
           <h2 className="text-3xl">Sign Up</h2>
         </div>
+
+        <form className="form" onSubmit={handleTestSubmit}>
+          <div className="form-control">
+            <label htmlFor="test" className="label">
+              test:{" "}
+            </label>
+
+            <input
+              type="text"
+              name="test"
+              id="test"
+              className="input"
+              required
+              value={test}
+              onChange={(e) => setTest(e.target.value)}
+            />
+
+            <input type="submit" value="Submit" className="btn btn-primary" />
+          </div>
+        </form>
 
         <div className="label mt-3 mx-auto">
           Sign up to{" "}
