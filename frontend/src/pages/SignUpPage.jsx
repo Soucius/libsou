@@ -12,6 +12,8 @@ const SignUpPage = () => {
     e.preventDefault();
 
     console.log(test);
+
+    setTest("");
   };
 
   const handleForm = (e) => {
