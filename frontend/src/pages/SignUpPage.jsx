@@ -1,6 +1,18 @@
+import { useState } from "react";
 import { Link } from "react-router";
 
 const SignUpPage = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [retypePassword, setRetypePassword] = useState("");
+
+  const handleForm = (e) => {
+    e.preventDefault();
+
+    setIsLoading(true);
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="card bg-base-100 w-96 h-97 shadow-sm border border-primary">
@@ -14,7 +26,7 @@ const SignUpPage = () => {
         </div>
 
         <div className="m-3">
-          <div className="form">
+          <form onSubmit={handleForm} className="form">
             <div className="card-body">
               <div className="form-control">
                 <fieldset className="fieldset mb-1">
@@ -26,6 +38,7 @@ const SignUpPage = () => {
                     type="text"
                     id="username"
                     name="username"
+                    required
                     className="input"
                     placeholder="Your Username..."
                   />
@@ -41,6 +54,7 @@ const SignUpPage = () => {
                   <input
                     type="password"
                     id="password"
+                    required
                     name="password"
                     className="input"
                     placeholder="Your Password..."
@@ -57,6 +71,7 @@ const SignUpPage = () => {
                   <input
                     type="password"
                     id="retype-password"
+                    required
                     name="retype-password"
                     className="input"
                     placeholder="Re-type Your Password..."
@@ -64,10 +79,12 @@ const SignUpPage = () => {
                 </fieldset>
               </div>
             </div>
-          </div>
+          </form>
 
           <div className="card-actions justify-center mx-6">
-            <button className="btn btn-primary w-full">Sign Up</button>
+            <button type="submit" className="btn btn-primary w-full">
+              {isLoading ? "Loading..." : "Sign Up"}
+            </button>
 
             <p className="label mt-3">
               Do you have
