@@ -11,6 +11,10 @@ const SignUpPage = () => {
     e.preventDefault();
 
     setIsLoading(true);
+
+    console.log(username);
+
+    setIsLoading(false);
   };
 
   return (
@@ -41,6 +45,8 @@ const SignUpPage = () => {
                     required
                     className="input"
                     placeholder="Your Username..."
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
                   />
                 </fieldset>
               </div>
@@ -58,6 +64,8 @@ const SignUpPage = () => {
                     name="password"
                     className="input"
                     placeholder="Your Password..."
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                   />
                 </fieldset>
               </div>
@@ -75,6 +83,8 @@ const SignUpPage = () => {
                     name="retype-password"
                     className="input"
                     placeholder="Re-type Your Password..."
+                    value={retypePassword}
+                    onChange={(e) => setRetypePassword(e.target.value)}
                   />
                 </fieldset>
               </div>
@@ -82,9 +92,11 @@ const SignUpPage = () => {
           </form>
 
           <div className="card-actions justify-center mx-6">
-            <button type="submit" className="btn btn-primary w-full">
-              {isLoading ? "Loading..." : "Sign Up"}
-            </button>
+            <input
+              type="submit"
+              value={isLoading ? "Loading..." : "Sign Up"}
+              className="btn btn-primary w-full"
+            />
 
             <p className="label mt-3">
               Do you have
